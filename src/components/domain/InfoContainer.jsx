@@ -7,8 +7,7 @@ const InfoContainer = () => {
       id="info"
       className="w-full h-dvh flex justify-center"
       sx={{
-        background: (theme) =>
-          `linear-gradient(${theme.palette.primary80.main} 0%, ${theme.palette.neutral5.main} 70%)`,
+        backgroundColor: (theme) => theme.palette.neutral5.main
       }}
     ></Box>
   );

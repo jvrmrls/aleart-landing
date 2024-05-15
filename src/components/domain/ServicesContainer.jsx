@@ -7,9 +7,7 @@ const ServicesContainer = () => {
       id="services"
       className="w-full h-dvh flex justify-center"
       sx={{
-        background: (theme) =>
-          `linear-gradient(${theme.palette.primary.main} 80%, ${theme.palette.primary80.main} 100%)`,
-        color: (theme) => theme.palette.neutral0.main,
+        backgroundColor: (theme) => theme.palette.neutral5.main
       }}
     >
       <div className="w-full max-w-[1200px] flex flex-col lg:flex-row justify-center lg:justify-around items-center gap-10 lg:gap-6 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px]">

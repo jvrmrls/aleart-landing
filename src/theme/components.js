@@ -33,7 +33,7 @@ const components = {
       {
         props: { variant: "contained", color: "secondary" },
         style: {
-          backgroundColor: "#FF7C5A",
+          backgroundColor: "#c47c84",
           fontWeight: "600",
           color: "#FFFFFF",
           padding: "12px 32px",
@@ -41,7 +41,7 @@ const components = {
           borderRadius: "12px",
           "&:hover": {
             boxShadow: "none",
-            backgroundColor: "#FF7C5A",
+            backgroundColor: "#c47c84",
           },
         },
       },

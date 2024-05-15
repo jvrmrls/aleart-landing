@@ -1,9 +1,9 @@
 export default {
   primary: {
-    main: "#614FE0",
+    main: "#283a4f",
   },
   secondary: {
-    main: "#FF7C5A",
+    main: "#e7dfa7",
   },
   neutral100: {
     main: "#0E0E10",
@@ -51,64 +51,64 @@ export default {
     main: "#FFFFFF",
   },
   primary190: {
-    main: "#0A0816",
+    main: "#06080c",
   },
   primary180: {
-    main: "#1B163F",
+    main: "#0d1121",
   },
   primary160: {
-    main: "#2D2467",
+    main: "#18203b",
   },
   primary140: {
-    main: "#3E338F",
+    main: "#22305a",
   },
   primary120: {
-    main: "#5041B8",
+    main: "#2e4080",
   },
   primary80: {
-    main: "#7D6FE6",
+    main: "#4c64b8",
   },
   primary60: {
-    main: "#9A8EEB",
+    main: "#6477c9",
   },
   primary40: {
-    main: "#86AEF1",
+    main: "#7487d6",
   },
   primary20: {
-    main: "#D3CEF6",
+    main: "#a1b1e6",
   },
   primary10: {
-    main: "#EFEDFC",
+    main: "#c7d1f2",
   },
   secondary190: {
-    main: "#1A08C09",
+    main: "#b8ae7a",
   },
   secondary180: {
-    main: "#472319",
+    main: "#c3ba8a",
   },
   secondary160: {
-    main: "#753929",
+    main: "#d2c69d",
   },
   secondary140: {
-    main: "#A34F3A",
+    main: "#dfd4af",
   },
   secondary120: {
-    main: "#D1664A",
+    main: "#ece4c6",
   },
   secondary80: {
-    main: "#FF9478",
+    main: "#f3ede0",
   },
   secondary60: {
-    main: "#FFAB95",
+    main: "#f7f3ea",
   },
   secondary40: {
-    main: "#FFC3B3",
+    main: "#f9f7f1",
   },
   secondary20: {
-    main: "#FFDAD1",
+    main: "#fcfbf7",
   },
   secondary10: {
-    main: "#FFF2EF",
+    main: "#fefdfc",
   },
   yellow100: {
     main: "#FFBF5C",
