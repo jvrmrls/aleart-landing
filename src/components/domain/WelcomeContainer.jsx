@@ -44,12 +44,12 @@ const WelcomeContainer = () => {
         </Box>
         <Box className="min-w-[200px] max-w-full lg:min-w-[400px] lg:max-w-[400px] min-h-[250px] lg:min-h-[500px] flex items-center flex-row lg:flex-row">
           <img
-            src="/images/ale-art-logo.png"
+            src="/images/ale-art-logo.webp"
             className="w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] object-contain"
             alt="logo principal"
           />
           <img
-            src="/images/ale-art-flowers-logo.png"
+            src="/images/ale-art-flowers-logo.webp"
             className="w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] object-contain"
             alt="logo-flores"
             />
