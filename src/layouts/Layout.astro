@@ -10,9 +10,12 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Hola, soy Ale y bienvenido a Ale Art, donde el tiempo se transforma en regalos inolvidables!"
+    />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="./aleart.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +24,28 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Etiqueta meta para definir el idioma de la página -->
+    <meta name="language" content="es" />
+
+    <!-- Etiqueta meta para especificar la región del contenido -->
+    <meta name="geo.region" content="ES" />
+
+    <!-- Etiqueta meta para especificar el autor de la página -->
+    <meta name="author" content="Ale Art" />
+
+    <!-- Etiqueta meta para especificar la fecha de última modificación -->
+    <meta name="last-modified" content="2024-05-06" />
+
+    <!-- Etiqueta meta para especificar los términos de búsqueda relacionados con la página -->
+    <meta
+      name="keywords"
+      content="arte, manualidades, decoración, regalos, flores, cuadros, cajas de regalo, snacks, arreglos florales, flores artificiales, aleartsv, ale art, aleart, ale art sv, ale art el salvador, ale art san miguel, ale art tienda, ale art tienda de arte, ale art tienda de manualidades, ale art tienda de decoración, ale art tienda de regalos, ale art tienda de flores, ale art tienda de cuadros, ale art tienda de cajas de regalo, ale art tienda de snacks, ale art tienda de arreglos florales, ale art tienda de flores artificiales, ale art tienda de aleartsv, ale art tienda de ale art, ale art tienda de aleart, ale art tienda de ale art sv, ale art tienda de ale art el salvador, ale art tienda de ale art san miguel"
+    />
+
+    <!-- Etiqueta meta para robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="copyright" content="Ale Art" />
   </head>
   <body>
     <slot />
