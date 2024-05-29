@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HighlightWord from "../components/HighlightWord.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <section id="welcome" class="w-full h-dvh flex justify-center">
+      <div
+        class="w-full max-w-[1200px] flex flex-col lg:flex-row justify-center lg:justify-around items-center gap-2 lg:gap-12 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px]"
+      >
+        <div
+          class="h-full flex items-center flex-col gap-4 justify-center lg:justify-center lg:gap-8"
+        >
+          <h1 class="text-3xl lg:text-5xl text-left">
+            ¡Bienvenido a {" "}
+            <HighlightWord class="font-semibold"> Ale Art </HighlightWord>
+            , donde los momentos se convierten en obras maestras!
+          </h1>
+          <h2 class="text-md lg:text-xl text-left">
+            Celebra la belleza de la vida con nuestras <HighlightWord
+              >creaciones artísticas</HighlightWord
+            > que inspiran y cautivan. Explora nuestra tienda en línea y encuentra
+            la pieza perfecta para conmemorar tus momentos más preciados.
+          </h2>
+          {/*<h1 class="text-3xl lg:text-6xl text-left">*/}
+          {/*  ¡Hola, soy Ale y bienvenido a{" "}*/}
+          {/*  <HighlightWord class="font-semibold">Ale Art</HighlightWord>,*/}
+          {/*  donde el tiempo se transforma en regalos inolvidables!*/}
+          {/*</h1>*/}
+          <button id="btnGoToStore" class="text-xl lg:text-3xl">
+            ¡Ir a la tienda!
+          </button>
+        </div>
+        <div
+          class="min-w-[200px] max-w-full lg:min-w-[400px] lg:max-w-[400px] min-h-[250px] lg:min-h-[500px] flex items-center flex-row lg:flex-row"
+        >
+          <img
+            src="/images/ale-art-logo.webp"
+            class="w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] object-contain"
+            alt="logo principal"
+          />
+          <img
+            src="/images/ale-art-flowers-logo.webp"
+            class="w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] object-contain"
+            alt="logo-flores"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  #welcome {
+    background-color: var(--neutral-5);
+  }
+</style>
+
+<script>
+  const buttonGoToStore = document.querySelector("#btnGoToStore");
+  buttonGoToStore.addEventListener("click", () => {
+    window.open("http://store.aleartsv.com", "_self");
+  });
+</script>
