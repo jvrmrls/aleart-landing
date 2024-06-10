@@ -3,9 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import HighlightWord from "../components/HighlightWord.astro";
 ---
 
-<Layout title="AleArt">
+<Layout title="Ale Art - El Salvador">
   <main>
-    <section id="welcome" class="w-full h-dvh flex justify-center">
+    <section
+      id="welcome"
+      class="w-full h-[90dvh] lg:h-[85dvh] flex justify-center"
+    >
       <div
         class="w-full max-w-[1200px] flex flex-col lg:flex-row justify-center lg:justify-around items-center gap-2 lg:gap-12 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px]"
       >
@@ -28,7 +31,10 @@ import HighlightWord from "../components/HighlightWord.astro";
           {/*  <HighlightWord class="font-semibold">Ale Art</HighlightWord>,*/}
           {/*  donde el tiempo se transforma en regalos inolvidables!*/}
           {/*</h1>*/}
-          <button id="btnGoToStore" class="text-xl lg:text-3xl">
+          <button
+            id="btnGoToStore"
+            class="text-xl lg:text-3xl border-none outl py-[16px] px-[32px] lg:py-[24px] lg:px-[48px] rounded-md _btn-primary"
+          >
             ¡Ir a la tienda!
           </button>
         </div>
@@ -48,18 +54,86 @@ import HighlightWord from "../components/HighlightWord.astro";
         </div>
       </div>
     </section>
+    <section
+      id="services"
+      class="w-full h-[90dvh] lg:h-[85dvh] flex justify-center"
+    >
+      <div
+        class="w-full max-w-[1200px] flex flex-col justify-start items-center gap-12 lg:gap-12 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px]"
+      >
+        <h4 class="text-2xl lg:text-4xl font-semibold">
+          En nuestro catalogo puedes encontrar:
+        </h4>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-16 gap-x-32">
+          <div class="flex flex-col gap-4 justify-center items-center">
+            <h6 class="font-medium text-lg lg:text-xl">Flores naturales</h6>
+            <p class="text-md">
+              Flores frescas de la clase que t&uacute; elijas, con tus colores
+              preferidos y con la delicadeza que se carecteriza un ramo natural.
+            </p>
+            <img
+              alt="flores-naturales"
+              src="/images/flower.webp"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="flex flex-col gap-4 justify-center items-center">
+            <h6 class="font-medium text-lg lg:text-xl">Flores eternas</h6>
+            <p class="text-md lg:text-md text-justify">
+              Encuentra la belleza que perdura con nuestras flores eternas. Cada
+              pieza es cuidadosamente seleccionada para ofrecerte una opción que
+              trasciende el tiempo, añadiendo un toque de elegancia a cualquier
+              espacio.
+            </p>
+            <img
+              alt="flores-eternas"
+              src="/images/flower-artificial.webp"
+              loading="lazy"
+            />
+          </div>
+          <div class="flex flex-col gap-4 justify-center items-center">
+            <h6 class="font-medium text-lg lg:text-xl">Cajas</h6>
+            <p class="text-md lg:text-md text-justify">
+              Explora nuestra colección de cajas exquisitamente diseñadas, cada
+              una lista para ser el regalo perfecto. Desde cajas decorativas
+              hasta cajas funcionales, descubre cómo nuestras creaciones pueden
+              elevar cualquier ocasión especial.
+            </p>
+            <img alt="cajas" src="/images/box.webp" loading="lazy" />
+          </div>
+          <div class="flex flex-col gap-4 justify-center items-center">
+            <h6 class="font-medium text-lg lg:text-xl">Cuadros</h6>
+            <p class="text-md lg:text-md text-justify">
+              Sumérgete en un mundo de arte con nuestra selección de cuadros
+              únicos. Desde paisajes impresionantes hasta retratos emocionantes,
+              cada pieza está cuidadosamente creada para inspirar y añadir un
+              toque de sofisticación a tu hogar u oficina.
+            </p>
+            <img alt="cuadros" src="/images/cuadro.webp" />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <style>
+    main {
+      background-image: radial-gradient(
+        circle 900px at calc(50% + 1000px) 250px,
+        var(--primary) 0,
+        transparent 100%
+      );
+    }
+    #welcome {
+      /* background-color: var(--neutral-5); */
+    }
+  </style>
+
+  <script>
+    const buttonGoToStore = document.querySelector("#btnGoToStore");
+    buttonGoToStore.addEventListener("click", () => {
+      window.open("http://store.aleartsv.com", "_self");
+    });
+  </script>
 </Layout>
-
-<style>
-  #welcome {
-    background-color: var(--neutral-5);
-  }
-</style>
-
-<script>
-  const buttonGoToStore = document.querySelector("#btnGoToStore");
-  buttonGoToStore.addEventListener("click", () => {
-    window.open("http://store.aleartsv.com", "_self");
-  });
-</script>

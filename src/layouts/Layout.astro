@@ -12,8 +12,9 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Hola, soy Ale y bienvenido a Ale Art, donde el tiempo se transforma en regalos inolvidables!"
+      content="Descubre una amplia variedad de presentes y detalles para regalar a quién tanto aprecias en Aleart. Visítanos en San Miguel, El Salvador, y encuentra opciones únicas que inspiran."
     />
+
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="./aleart.ico" />
     <meta name="generator" content={Astro.generator} />
@@ -57,6 +58,7 @@ const { title } = Astro.props;
   :root {
     --neutral-5: #f3f3f3;
     --primary: #283a4f;
+    --wt-color-dark: #27282c;
   }
 
   html,
@@ -65,5 +67,14 @@ const { title } = Astro.props;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--neutral-5);
+    color: var(--wt-color-dark, #000);
+  }
+
+  ._btn-primary {
+    background-color: var(--primary);
+    color: #fff;
   }
 </style>
