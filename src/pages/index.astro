@@ -13,14 +13,14 @@ import HighlightWord from "../components/HighlightWord.astro";
         class="w-full max-w-[1200px] flex flex-col lg:flex-row justify-center lg:justify-around items-center gap-2 lg:gap-12 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px]"
       >
         <div
-          class="h-full flex items-center flex-col gap-4 justify-center lg:justify-center lg:gap-8"
+          class="h-full flex items-center flex-col gap-6 justify-center lg:justify-center lg:gap-8"
         >
-          <h1 class="text-3xl lg:text-5xl text-left">
+          <h1 class="text-4xl lg:text-5xl text-left">
             ¡Bienvenido a {" "}
-            <HighlightWord class="font-semibold"> Ale Art </HighlightWord>
-            , donde los momentos se convierten en obras maestras!
+            <HighlightWord class="font-semibold"> Ale Art</HighlightWord>, donde
+            los momentos se convierten en obras maestras!
           </h1>
-          <h2 class="text-md lg:text-xl text-left">
+          <h2 class="text-lg lg:text-xl text-left">
             Celebra la belleza de la vida con nuestras <HighlightWord
               >creaciones artísticas</HighlightWord
             > que inspiran y cautivan. Explora nuestra tienda en línea y encuentra
@@ -33,7 +33,7 @@ import HighlightWord from "../components/HighlightWord.astro";
           {/*</h1>*/}
           <button
             id="btnGoToStore"
-            class="text-xl lg:text-3xl border-none outl py-[16px] px-[32px] lg:py-[24px] lg:px-[48px] rounded-md _btn-primary"
+            class="text-xl lg:text-3xl border-none py-[16px] px-[32px] lg:py-[24px] lg:px-[48px] rounded-full outline-none _btn-primary"
           >
             ¡Ir a la tienda!
           </button>
@@ -56,18 +56,18 @@ import HighlightWord from "../components/HighlightWord.astro";
     </section>
     <section
       id="services"
-      class="w-full h-[90dvh] lg:h-[85dvh] flex justify-center"
+      class="w-full min-h-[90dvh] lg:min-h-[85dvh] flex justify-center"
     >
       <div
         class="w-full max-w-[1200px] flex flex-col justify-start items-center gap-12 lg:gap-12 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px]"
       >
-        <h4 class="text-2xl lg:text-4xl font-semibold">
+        <h3 class="text-2xl lg:text-4xl font-semibold">
           En nuestro catalogo puedes encontrar:
-        </h4>
+        </h3>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-16 gap-x-32">
-          <div class="flex flex-col gap-4 justify-center items-center">
-            <h6 class="font-medium text-lg lg:text-xl">Flores naturales</h6>
-            <p class="text-md">
+          <div class="flex flex-col gap-4 justify-start items-center">
+            <h4 class="font-medium text-xl lg:text-2xl">Flores naturales</h4>
+            <p class="text-lg lg:text-xl text-justify">
               Flores frescas de la clase que t&uacute; elijas, con tus colores
               preferidos y con la delicadeza que se carecteriza un ramo natural.
             </p>
@@ -78,9 +78,9 @@ import HighlightWord from "../components/HighlightWord.astro";
             />
           </div>
 
-          <div class="flex flex-col gap-4 justify-center items-center">
-            <h6 class="font-medium text-lg lg:text-xl">Flores eternas</h6>
-            <p class="text-md lg:text-md text-justify">
+          <div class="flex flex-col gap-4 justify-start items-center">
+            <h4 class="font-medium text-xl lg:text-2xl">Flores eternas</h4>
+            <p class="text-lg lg:text-xl text-justify">
               Encuentra la belleza que perdura con nuestras flores eternas. Cada
               pieza es cuidadosamente seleccionada para ofrecerte una opción que
               trasciende el tiempo, añadiendo un toque de elegancia a cualquier
@@ -92,9 +92,9 @@ import HighlightWord from "../components/HighlightWord.astro";
               loading="lazy"
             />
           </div>
-          <div class="flex flex-col gap-4 justify-center items-center">
-            <h6 class="font-medium text-lg lg:text-xl">Cajas</h6>
-            <p class="text-md lg:text-md text-justify">
+          <div class="flex flex-col gap-4 justify-start items-center">
+            <h4 class="font-medium text-xl lg:text-2xl">Cajas</h4>
+            <p class="text-lg lg:text-xl text-justify">
               Explora nuestra colección de cajas exquisitamente diseñadas, cada
               una lista para ser el regalo perfecto. Desde cajas decorativas
               hasta cajas funcionales, descubre cómo nuestras creaciones pueden
@@ -102,9 +102,9 @@ import HighlightWord from "../components/HighlightWord.astro";
             </p>
             <img alt="cajas" src="/images/box.webp" loading="lazy" />
           </div>
-          <div class="flex flex-col gap-4 justify-center items-center">
-            <h6 class="font-medium text-lg lg:text-xl">Cuadros</h6>
-            <p class="text-md lg:text-md text-justify">
+          <div class="flex flex-col gap-4 justify-start items-center">
+            <h4 class="font-medium text-xl lg:text-2xl">Cuadros</h4>
+            <p class="text-lg lg:text-xl text-justify">
               Sumérgete en un mundo de arte con nuestra selección de cuadros
               únicos. Desde paisajes impresionantes hasta retratos emocionantes,
               cada pieza está cuidadosamente creada para inspirar y añadir un
@@ -113,6 +113,30 @@ import HighlightWord from "../components/HighlightWord.astro";
             <img alt="cuadros" src="/images/cuadro.webp" />
           </div>
         </div>
+      </div>
+    </section>
+    <section
+      id="utility"
+      class="w-full min-h-[200px] h-[50dvh] lg:h-[45dvh] flex justify-center py-[100px] mt-[40px]"
+    >
+      <div
+        class="flex justify-center items-start flex-col gap-2 lg:gap-4 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px] max-w-[1000px]"
+      >
+        <h3 class="text-2xl lg:text-4xl font-semibold">
+          Personalizaci&oacute;n y seguimiento en un mismo lugar.
+        </h3>
+        <p class="text-justify text-lg lg:text-xl">
+          Ya no deber&aacute;s acceder a otras aplicaciones o servicios de
+          mensajer&iacute;a para conocer el estado de tu paquete. Actualizaremos
+          los movimientos para que est&eacute;s al d&iacute;a con su
+          preparaci&oacute;n.
+        </p>
+        <button
+          id="btnHowItWorks"
+          class="text-xl lg:text-xl py-[16px] px-[32px] lg:py-[16px] lg:px-[32px] rounded-full outline-none _btn-primary-outlined mt-[16px]"
+        >
+          ¡As&iacute; funciona!
+        </button>
       </div>
     </section>
   </main>
@@ -127,6 +151,14 @@ import HighlightWord from "../components/HighlightWord.astro";
     }
     #welcome {
       /* background-color: var(--neutral-5); */
+    }
+
+    section#utility {
+      background-image: radial-gradient(
+        800px at 0 150%,
+        var(--primary) 0,
+        transparent 100%
+      );
     }
   </style>
 
