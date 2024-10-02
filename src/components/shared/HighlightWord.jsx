@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 
-const HighloghtWord = ({ color = "primary", children, ...props }) => {
+const HighlightWord = ({ color = "primary", children, ...props }) => {
   return (
     <Box
       component="span"
@@ -11,4 +11,4 @@ const HighloghtWord = ({ color = "primary", children, ...props }) => {
     </Box>
   );
 };
-export default HighloghtWord;
+export default HighlightWord;

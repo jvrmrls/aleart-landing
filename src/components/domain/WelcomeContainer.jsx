@@ -1,59 +1,63 @@
 import { Box, Button } from "@mui/material";
 import HighlightWord from "#/components/shared/HighlightWord";
+import Lottie from "lottie-react";
+import animation from "#/assets/animations/gift-animation.json";
+import { useState } from "react";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const WelcomeContainer = () => {
-  const handleGoToStore = () => {
-    window.open("http://store.aleartsv.com", "_self");
+  const {
+    VITE_APP_STORE_URL,
+    VITE_APP_WHATSAPP_URL,
+    VITE_APP_HERO_REDIRECTION,
+  } = import.meta.env;
+
+  const [heroRedirection] = useState(VITE_APP_HERO_REDIRECTION);
+
+  const handleGoTo = () => {
+    const url =
+      heroRedirection === "store" ? VITE_APP_STORE_URL : VITE_APP_WHATSAPP_URL;
+    window.open(url, "_blank");
   };
 
   return (
     <Box
       component={"section"}
       id="welcome"
-      className="w-full h-dvh flex justify-center"
-      sx={{
-        backgroundColor: (theme) => theme.palette.neutral5.main
-      }}
+      className="w-full h-[90vh] lg:h-[85vh] flex justify-center"
     >
-      <div className="w-full max-w-[1200px] flex flex-col lg:flex-row justify-center lg:justify-around items-center gap-2 lg:gap-12 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px] ">
-        <Box className="h-full flex items-center flex-col gap-4 justify-center lg:justify-center lg:gap-8">
-          <h1 className="text-3xl lg:text-5xl text-left">
-            ¡Bienvenido a {' '}
-              <HighlightWord className="font-semibold">
-                Ale Art
-              </HighlightWord>
-            , donde los momentos se convierten en obras maestras!
+      <div className="w-full max-w-[1400px] flex flex-col lg:flex-row justify-center lg:justify-around items-center gap-2 lg:gap-12 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px] ">
+        <Box className="lg:h-full lg:flex-1 flex items-center flex-col gap-8 justify-center lg:justify-center ">
+          <h1 className="text-5xl lg:text-7xl text-left font-bold">
+            ¡Convierte momentos en obras maestras!
           </h1>
-          <h2 className="text-sm lg:text-xl text-left">
-              Celebra la belleza de la vida con nuestras <HighlightWord>creaciones artísticas</HighlightWord> que inspiran y cautivan.
-            Explora nuestra tienda en línea y encuentra la pieza perfecta para conmemorar tus momentos más preciados.
+          <h2 className="text-md lg:text-xl text-justify">
+            Celebra la belleza de la vida en{" "}
+            <HighlightWord className="font-bold">Ale Art</HighlightWord> con
+            nuestras{" "}
+            <HighlightWord className="font-bold">
+              creaciones artísticas
+            </HighlightWord>{" "}
+            que inspiran y cautivan. Explora{" "}
+            {heroRedirection === "store"
+              ? "nuestra tienda en línea"
+              : "nuestro catálogo"}{" "}
+            y encuentra la pieza perfecta para conmemorar tus momentos más
+            preciados.
           </h2>
-          {/*<h1 className="text-3xl lg:text-6xl text-left">*/}
-          {/*  ¡Hola, soy Ale y bienvenido a{" "}*/}
-          {/*  <HighlightWord className="font-semibold">Ale Art</HighlightWord>,*/}
-          {/*  donde el tiempo se transforma en regalos inolvidables!*/}
-          {/*</h1>*/}
           <Button
             variant="contained"
-            color="secondary"
+            color="primary"
             size="large"
-            onClick={handleGoToStore}
+            onClick={handleGoTo}
+            startIcon={<ShoppingCartIcon />}
           >
-            ¡Ir a la tienda!
+            Ir a {heroRedirection === "store" ? "la tienda" : "WhatsApp"}
           </Button>
         </Box>
-        <Box className="min-w-[200px] max-w-full lg:min-w-[400px] lg:max-w-[400px] min-h-[250px] lg:min-h-[500px] flex items-center flex-row lg:flex-row">
-          <img
-            src="/images/ale-art-logo.webp"
-            className="w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] object-contain"
-            alt="logo principal"
-          />
-          <img
-            src="/images/ale-art-flowers-logo.webp"
-            className="w-[150px] h-[150px] lg:w-[400px] lg:h-[400px] object-contain"
-            alt="logo-flores"
-            />
-        </Box>
+        <div className="w-full max-w-[250px] lg:min-w-[300px] lg:w-[25vw] lg:max-w-[350px] flex items-center justify-center">
+          <Lottie animationData={animation} />
+        </div>
       </div>
     </Box>
   );
