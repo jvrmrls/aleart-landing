@@ -22,7 +22,7 @@ const ContactContainer = () => {
           </a>{" "}
           o dir&iacute;gete a cualquiera de nuestras redes sociales
         </p>
-        <div className="grid grid-cols-3 gap-4 lg:gap-8">
+        <div className="grid grid-cols-2 gap-4 lg:gap-8">
           <a href={`${import.meta.env.VITE_APP_WHATSAPP_URL}`} target="_blank">
             <img
               src={`${import.meta.env.VITE_APP_MEDIA_URL}/whatsapp-48.png`}
@@ -36,14 +36,6 @@ const ContactContainer = () => {
               src={`${import.meta.env.VITE_APP_MEDIA_URL}/instagram-48.png`}
               className="w-10 lg:w-12"
               alt="Instagram"
-              loading="lazy"
-            />
-          </a>
-          <a href={`${import.meta.env.VITE_APP_FACEBOOK_URL}`} target="_blank">
-            <img
-              src={`${import.meta.env.VITE_APP_MEDIA_URL}/facebook-48.png`}
-              className="w-10 lg:w-12"
-              alt="Facebook"
               loading="lazy"
             />
           </a>
