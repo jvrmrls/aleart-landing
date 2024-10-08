@@ -1,68 +1,51 @@
 import { Box } from "@mui/material";
-import HighlightWord from "#/components/shared/HighlightWord";
-import Lottie from "lottie-react";
-import coupleAnimation from "#/assets/animations/couple.json";
-import birthdayAnimation from "#/assets/animations/birthday.json";
-import deathAnimation from "#/assets/animations/death.json";
-import moreAnimation from "#/assets/animations/more.json";
+import { InstagramEmbed } from "react-social-media-embed";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const ProductsContainer = () => {
+  const products = [
+    "https://www.instagram.com/p/C6yv8wlMl66",
+    "https://www.instagram.com/p/C5cSaJEsFyC",
+    "https://www.instagram.com/p/C7mjnsNPfbS",
+    "https://www.instagram.com/p/C23H4uBvL4c",
+    "https://www.instagram.com/p/CxgFtCPOwMQ",
+    "https://www.instagram.com/p/C-5Lz8pOMNW",
+    "https://www.instagram.com/p/CxGxletPhb-",
+  ];
   return (
     <Box
       component={"section"}
-      id="events"
-      className="w-full min-h-[90vh] flex justify-center bg-white"
+      id="products"
+      className="w-full min-h-[80vh] flex items-center justify-center bg-white py-[60px] "
     >
-      <div
-        id="products-container"
-        className="w-full flex justify-center py-[100px]"
-      >
-        <div className="w-full max-w-[1400px] px-[32px] py-[16px] lg:px-[64px] lg:py-[32px] flex flex-col gap-8 items-center">
-          <h3 className="text-4xl lg:text-6xl text-center max-w-[700px] font-semibold">
-            Tu mejor aliado en tus momentos especiales.
+      <div className="w-full max-w-[1400px]  px-[32px] py-[16px] lg:px-[64px] lg:py-[32px] flex flex-col lg:flex-row items-center justify-center gap-8">
+        <div className="w-full lg:w-1/2 flex flex-col gap-8 lg:gap-16">
+          <h3 className="text-4xl lg:text-6xl text-center w-full lg:max-w-[700px] font-semibold">
+            Nuestros momentos capturados
           </h3>
-          <p className="text-md lg:text-lg max-w-[800px] text-justify">
-            En Ale Art, entendemos que cada evento es único y especial. Por eso,
-            ofrecemos una variedad de productos diseñados para acompañarte en
-            las distintas etapas de la vida. Desde celebraciones de amor hasta
-            momentos de despedida, estamos aquí para ayudarte a crear
-            experiencias memorables. Explora nuestros círculos de eventos y
-            descubre cómo podemos contribuir a tu ocasión:
+          <p className="text-md lg:text-lg w-full lg:max-w-[800px] text-justify">
+            Descubre nuestra selecci&oacute;n de piezas &uacute;nicas que
+            transforman cada ocasi&oacute;n en un recuerdo inolvidable. Desde
+            obras de arte vibrantes hasta detalles encantadores de nuestra
+            l&iacute;nea de flores y deliciosos snacks, cada producto
+            est&aacute; dise&ntilde;ado para a&ntilde;adir un toque especial a
+            tus celebraciones. ¡Explora y elige la que cuente tu historia!
           </p>
-          <div className="w-full max-w-[1400px] grid gap-8 lg:gap-4 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px] grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
-            <div className="flex flex-col justify-around items-center gap-2">
-              <Lottie
-                animationData={coupleAnimation}
-                loop={true}
-                className="h-[100px]"
-              />
-              <h5 className="text-md font-semibold">Aniversarios</h5>
-            </div>
-            <div className="flex flex-col justify-around items-center gap-2">
-              <Lottie
-                animationData={birthdayAnimation}
-                loop={true}
-                className="h-[100px]"
-              />
-              <h5 className="text-md font-semibold">Cumplea&ntilde;os</h5>
-            </div>
-            <div className="flex flex-col justify-around items-center gap-2">
-              <Lottie
-                animationData={deathAnimation}
-                loop={true}
-                className="h-[100px]"
-              />
-              <h5 className="text-md font-semibold">Funerales</h5>
-            </div>
-            <div className="flex flex-col justify-around items-center gap-2">
-              <Lottie
-                animationData={moreAnimation}
-                loop={true}
-                className="h-[100px]"
-              />
-              <h5 className="text-md font-semibold">¡Y muchos m&aacute;s!</h5>
-            </div>
-          </div>
+        </div>
+
+        <div className="w-full lg:flex-1 lg:h-[650px] lg:px-[64px] lg:py-[32px] flex flex-row  gap-8 items-center overflow-auto no-scrollbar">
+          {products?.map((product, index) => (
+            <motion.div
+              className="w-full max-h-full"
+              key={index}
+              initial={{ opacity: 0, x: 200 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
+            >
+              <InstagramEmbed url={product} width={320} />
+            </motion.div>
+          ))}
         </div>
       </div>
     </Box>
