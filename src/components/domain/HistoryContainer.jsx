@@ -18,7 +18,7 @@ const HistoryContainer = () => {
             src={`${import.meta.env.VITE_APP_MEDIA_URL}/me-landing.jpg`}
             loading="lazy"
             alt="us"
-            className="w-full max-w-[400px] lg:w-[25vw] lg:max-w-[400px] object-cover rounded-full"
+            className="w-full max-w-[400px] lg:w-[25vw] lg:h-[25vw] lg:max-h-[400px] lg:max-w-[400px] object-cover rounded-full"
           />
           <p className="text-md lg:text-lg max-w-[500px] text-justify">
             Somos un emprendimiento apasionado que naci&oacute; el 26 de enero
