@@ -10,7 +10,7 @@ const TopBar = () => {
     >
       <div>
         <img
-          src={`${import.meta.env.VITE_APP_MEDIA_URL}/clean-base-logo.png`}
+          src={`${import.meta.env.VITE_APP_MEDIA_URL}/cp-light-base-logo.png`}
           alt="logo"
           loading="lazy"
           className="w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] object-contain"

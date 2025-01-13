@@ -5,14 +5,14 @@ const BottomContainer = () => {
     <Box
       className="min-h-[300px] py-[64px] flex flex-col justify-center items-center"
       sx={{
-        backgroundColor: "#2d2d2d",
-        color: "white",
+        backgroundColor: "#F3F3F3",
+        // color: "black",
       }}
     >
       <div className="w-full max-w-[1000px] flex flex-col gap-12 lg:gap-2 lg:flex-row items-center justify-around ">
         <div className="flex flex-col gap-2 max-w-[250px] justify-center items-center">
           <img
-            src={`${import.meta.env.VITE_APP_MEDIA_URL}/clean-base-logo.png`}
+            src={`${import.meta.env.VITE_APP_MEDIA_URL}/light-base-logo.png`}
             alt="aleart-logo"
             className="w-32"
           />

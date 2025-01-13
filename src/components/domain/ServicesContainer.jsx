@@ -10,7 +10,7 @@ const ServicesContainer = () => {
       <div className="w-full max-w-[1400px] grid gap-16 lg:gap-8 px-[32px] py-[16px] lg:px-[64px] lg:py-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         <Box className="flex flex-col lg:flex-row justify-center items-center shadow-md lg:shadow-xl h-auto px-6 lg:px-3 py-6 gap-4 rounded-lg">
           <img
-            src={`${import.meta.env.VITE_APP_MEDIA_URL}/clean-base-logo.png`}
+            src={`${import.meta.env.VITE_APP_MEDIA_URL}/light-base-logo.png`}
             loading="lazy"
             alt="Base Logo"
             className="w-[180px] h-[180px]  lg:w-[120px] lg:h-[120px] rounded-full"
